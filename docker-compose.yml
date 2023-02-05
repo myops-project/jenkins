@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:latest
+    container_name: jenkins
+    restart: always
+    mem_limits: 512m
+    cpus: 0.5
+    volumes:
+      - ./volumes/jenkins:/var/jenkins_home
+    ports:
+      - 8080:8080
